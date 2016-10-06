@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+	<link href="index.css" rel="stylesheet" type="text/css">
+	<link href="modal-index.css" rel="stylesheet" type="text/css">
+	<script src="modal-index.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'http://bootsnipp.com');
+        });
+    </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">	
+	
+
+	<title>Index</title>
+</head>
+<body>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+<div style="background:url(background-staff.jpg);">
+<div class="container">
+	<div class="jumbotron">
+	<center><h1> Bienvenue sur Staff-Emploi</h1>
+	</div>
+	
+    <div id="tabs-home" class="row slider" style="background:url(staff-background.png);">
+        <div class="col-sm-3">
+            <nav class="nav-sidebar">
+                <ul class="nav tabs">
+                    <li class="active"><a href="#tab1" data-toggle="tab"><p>Postulez</p><span>Le premier site de recrutement en temps réel</span></a></li>
+                    <li class=""><a href="#tab2" data-toggle="tab"><p>S'inscrire</p><span>S'enregistrer et se connecter</span></a></li>
+                    <li class=""><a href="#tab3" data-toggle="tab"><p>Déja inscrit?</p><span>Se connecter</span></a></li>   
+                    <li class=""><a href="#tab4" data-toggle="tab"><p>Visitez le blog</p><span>Toutes les activités de Staff-Emploi</span></a></li>  
+                </ul>
+            </nav>
+        </div>
+        <!-- tab content -->
+        <div id="wea" class="col-sm-9 tab-content">
+        
+            <div class="tab-pane active text-style fade in active" id="tab1">
+                <h2 class="panel-title">Staff-Emploi</h2>
+				<hr width="80%" />
+                <p>Une interface d'échange entre candidats et recruteurs en toute simplicité</p>
+                <p><strong>simple et pratique</strong></p>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong><a href="worker-liste.php">Accédez au site</a></strong></h3>
+                    </div></div>
+                
+            </div>
+            
+            <div class="tab-pane text-style fade" id="tab2">
+                <h2 class="panel-title">Inscription</h2>
+				<hr width="80%" />
+                <p>Renseignez vos coordonnées pour accéder à la plateforme</p>
+                <p><strong>et créez votre profil (Recruteur ou Worker)</strong></p>
+                
+                       <h3 class="panel-title">Cliquez sur le bouton pour nous rejoindre:</h3><br />
+                       <a href="accueil-inscription.php"> <input type="button" class="btn btn-default btn-lg" value="S'inscrire" /></a>
+                    
+                
+            </div>
+            
+            <div class="tab-pane text-style fade" id="tab3">
+                <h2 class="panel-title">Espace Membre</h2>
+				<hr width="80%" />
+				<p>Connectez-vous</p>
+				
+                    
+                <p>Munissez-vous de votre Login et Mot de Passe</p>
+				
+				
+                <p><strong>Veuillez cliquer sur le bouton pour vous connecter:</strong></p>
+                 <p><a href="#" class="btn btn-success btn-lg" role="button" data-toggle="modal" data-target="#login-modal">SE CONNECTER</a></p>
+				
+				
+	
+	</div>
+	
+			<div class="tab-pane text-style fade" id="tab4">
+                    
+                <h2 class="panel-title">Le Blog</h2>
+				<hr width="80%" />
+                    
+                <p>Toutes nos news en ligne </p>
+                <p><strong>Rejoignez-nous</strong></p>
+				
+                 <p><a href="https://staffemploi.wordpress.com/" class="btn btn-warning btn-lg" role="button">Blog Staff-Emploi</a></p>
+	
+</div>
+</div>
+<!-- END # BOOTSNIP INFO -->
+
+<!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+					<img class="img-circle" id="img_logo" src="stafflogo.jpg">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+				</div>
+                
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+                
+                    <!-- Begin # Login Form -->
+                    <form id="login-form" name="formulaire" method="POST" action="login.php">
+		                <div class="modal-body">
+				    		<div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Saisir login et mot de passe</span>
+                            </div>
+				    		<input id="login_username" class="form-control" name="login" type="text" placeholder="nom d'utilisateur" required>
+				    		<input id="login_password" class="form-control" type="password" name="password" placeholder="mot de passe" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Se souvenir de moi
+                                </label>
+                            </div>
+        		    	</div>
+				        <div class="modal-footer">
+                            <div>
+                                <button type="submit" name="connexion" class="btn btn-primary btn-lg btn-block">Se connecter</button>
+                            </div>
+				    	    <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Mot de passe oublié?</button>
+                                
+                            </div>
+				        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+    	    		    <div class="modal-body">
+		    				<div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Entrer votre adresse email.</span>
+                            </div>
+		    				<input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Envoyer</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Se connecter</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">S'inscrire</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" style="display:none;">
+            		    <div class="modal-body">
+		    				<div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Créer un compte.</span>
+                            </div>
+		    				<input id="register_username" class="form-control" type="text" placeholder="Login" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Mot de passe" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Inscription</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Se connecter</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Mot de passe oublié?</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Register Form -->
+                    
+                </div>
+                <!-- End # DIV Form -->
+                
+			</div>
+		</div>
+	</div>
+            </div> 
+            
+            <div class="tab-pane text-style fade" id="tab4">
+                <h2>staff-emploi n'attend que vous !</h2>
+                <p>Déjà une communauté dynamique vous attend. Vous pouvez vous rendre à notre <strong>page contact</strong> pour des informations supplémentaires.</p>
+         
+		 </div> 
+		 
+		 
+		 
+
+
+
+        
+ </div>
+    
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+	 var stop = false;
+$(document).ready(function() {
+   
+ 
+   
+ 
+     var tabCarousel = setInterval(function() {
+        var tabs = $('#tabs-home .nav.tabs > li'),
+            active = tabs.filter('.active'),
+            next = active.next('li'),
+            toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
+
+        toClick.trigger('click');
+    }, 7000);
+
+    
+});
+
+	</script>
+	</body>
+
+<script src="modal-index.js"></script>
+  </body>
+  
+</html>
