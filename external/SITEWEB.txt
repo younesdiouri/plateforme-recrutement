@@ -1,0 +1,29 @@
+
+Compte rendu de la séance du 25 Janvier 2016:
+
+
+Site web Candidatures : 
+
+System de points et de recommandation
+Ajout de worker en formulaire (nom prenom etc) qui s'affiche sur un exemple de cv directement (formation etc ) avec possibilité de le modifier
+SI t'es pas worker tu peux rien.
+sécurité : joindre une carte d'identité / carte vitale / certificat de résidence
+carte de séjour avec date de validité / 
+Skype VOIP pour entretien ... 
+Profil Ambassadeur : Franchise staff-emploi , permettant d'intégrer des workers sur le site
+Entreprise et workers comment about each other after working experiences.
+
+
+
+Application PGI Staff-emploi:
+
+Régler le système d'ajout de worker.
+Ajouter le système de création de contrat.
+Ajouter le stockage de CV et de consulation Et du stockage de carte d'identité etc photo ? (VOIR FOFOS!)
+Ajouter l'affichage d'erreur ou non sur le système d'ajout de worker et d'ajout de disponibilité
+Ajouter l'affichage de disponibilité 
+Pour la partie admin : ajouter un systeme d'ajout de modification de MOT DE PASSe et de création de manager / stagiaire (POWER)
+Ajouter les pages stagiaire - manager 
+Disponibilités: Matin - Après-Midi - Nuit (change)
+---------------------------------------
+
